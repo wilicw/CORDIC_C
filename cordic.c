@@ -6,7 +6,7 @@
 
 #define PI 3.141592653589793
 #define IT 20
-#define TEST_ITTER 1000000UL
+#define TEST_LOOP 1000000UL
 
 const uint32_t rotation[] = {0x3f490fdb, 0x3eed6338, 0x3e7adbb0, 0x3dfeadd5,
                              0x3d7faade, 0x3cffeaae, 0x3c7ffaab, 0x3bfffeab,
@@ -41,11 +41,11 @@ int main() {
     puts("-");
   }
 
-  printf("loop: %ld\n", TEST_ITTER);
+  printf("loop: %ld\n", TEST_LOOP);
 
   begin = clock();
 
-  i = TEST_ITTER;
+  i = TEST_LOOP;
 
   while (i--) {
     float rad = (float)((i + shift) % 90) / 180.0f * PI;
@@ -60,7 +60,7 @@ int main() {
 
   begin = clock();
 
-  i = TEST_ITTER;
+  i = TEST_LOOP;
 
   while (i--) {
     float rad = (float)((i + shift) % 90) / 180.0f * PI;
